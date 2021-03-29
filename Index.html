@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo Nº 6</title>
+  <link rel="stylesheet" href="bulma.css">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" type="image/png" href="img/tecno.png">
+</head>
+
+<body>
+  <div class="container">
+    <div class="notification is-primary">
+      Tarea Número 4 - Curso Desarrollo Web <strong>IDAT</strong> Participantes : Grupo # 6
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <header>
+      <div class="columns">
+        <div class="column is-10">
+          <h1 class="title">Sistema Integrado de Gestion</h1>
+        </div>
+        <div class="column is-1">
+          <figure class="image is-32x32">
+            <img src="img/usuario.png" alt="foto_usuario">
+        </div>
+        <div class="column is-1">
+          <h4>usuario 1</h4>
+        </div>
+      </div>
+    </header>
+  </div>
+  <br>
+  <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">Inicio</a>
+          <a class="navbar-item">Usuarios</a>
+          <a class="navbar-item">Clientes</a>
+          <a class="navbar-item">Proveedores</a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Productos</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">Categoria</a>
+              <a class="navbar-item">Nacionales</a>
+              <a class="navbar-item">Importados</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">Generar Orden de Compra</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" placeholder="Buscar en la web">
+            </div>
+            <div class="control">
+              <a class="button is-info">
+                Buscador
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <aside>
+      <form action="empleado" method="POST">
+        <fieldset>
+          <div>
+            <p class="subtitle is-6">Agregar Producto Nuevo</p>
+          </div>
+          <br>
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Código*</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-2 is-8">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <input class="input is-small" type="tel" id="codigo" placeholder="Solo números"
+                                pattern="[0-9]{1,6}" title="Debe ingresar solo 6 números" required maxlength="6">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-0 is-1">
+                        <input class="button is-warning is-pulled-right" type="submit" value="Validar">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Nombre*</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-4">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <input class="input is-small" type="text" id="nombre" placeholder="Solo letras"
+                              pattern="[a-zA-Z\s\-\0-9]{1,100}" title="Solo letras y números" required maxlength="100">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Abreviatura</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-4">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <input class="input is-small" type="text" id="abreviatura" pattern="[a-zA-Z]{2,10}"
+                              placeholder="Solo letras" maxlength="10">
+          
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Categoria</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-8">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+
+                              <div class="field-body">
+                                <div class="field">
+                                  <p class="control">
+                  
+                                  <div class="select">
+                                    <select>
+                                      <option>Panes Especiales</option>
+                                      <option>Lácteos</option>
+                                      <option>Pasteles</option>
+                                      <option>Bocaditos</option>
+                                    </select>
+                                  </div>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>RUC Proveedor*</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-4">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <input class="input is-small" type="tel" id="ruc" placeholder="Solo números"
+                                pattern="[0-9]{1,11}" title="Debe ingresar solo 11 números" required maxlength="11">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Precio*</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-4">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <input class="input is-small" type="number" step="0.01" name="precio" placeholder="Valor con 02 decimales" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Color Etiqueta</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-4">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <input type="color"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Fecha*</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-4">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <input type="date" id="fecha">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Estado</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-10">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <div class="control">
+                                <label class="radio">
+                                  <input type="radio" name="rsvp">
+                                  Activo
+                                </label>
+                                <label class="radio">
+                                  <input type="radio" name="rsvp">
+                                  Suspendido
+                                </label>
+                                <label class="radio" disabled>
+                                  <input type="radio" name="rsvp" disabled>
+                                  Baja
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Afecto a Impuesto</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-10">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <label class="checkbox">
+                                <input type="checkbox">
+                                Confirmar <a href="#">Revisar si aplica</a>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Foto*</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-20">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <div class="file has-name">
+                                <label class="file-label">
+                                  <input class="file-input" type="file" accept=".png,.jpg" name="resume">
+                                  <span class="file-cta">
+                                    <span class="file-icon">
+                                      <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                      Subir Archivo…
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                    <label>Descripcion*</label>
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-4">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <textarea class="textarea is-info" placeholder="Ingresar informacion detallada del Producto"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column is-offset-1 is-10">
+                        <div class="field is-horizontal">
+                          <div class="field-body">
+                            <div class="field">
+                              <input class="button is-success is-pulled-right" type="submit" value="Grabar">
+                              <input class="button is-success" type="reset" value="Limpiar">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </fieldset>
+      </form>
+    </aside>
+  </div>
+  <div class="container">
+    <div class="notification is-primary">
+      <footer>
+        <ul>
+          <div class="column">
+            <div class="columns">
+              <div class="column is-offset-6 is-1">
+                <input class="button is-info is-pulled-right" type="submit" value="Que Hacemos?">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns">
+              <div class="column is-offset-8 is-1">
+                <input class="button is-info is-pulled-right" type="submit" value="Enlaces Principales">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns">
+              <div class="column is-offset-8 is-1">
+                <input class="button is-info is-pulled-right" type="submit" value="Contactenos">
+              </div>
+            </div>
+          </div>
+        </ul>
+      </footer>
+    </div>
+  </div>
+  <script src="Index.js"></script>
+</body>
+</html>
